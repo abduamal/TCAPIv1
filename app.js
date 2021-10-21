@@ -2,12 +2,22 @@
 const express = require('express');
 // express has been declared, and can be called
 const app = express();
+const recipeRouter = express.Router();
 // later, there will be a tool that passes the port into the application.
 // Until it is configured, 3000 serves as backup
 const port = process.env.PORT || 3000;
 // with every get request, this app will respond with a function that has the request and response
 // we look at the request, then do something to respond back
 // this is a get handler
+recipeRouter.route('/recipes')
+  .get((req, res) => {
+    const response = { hello: 'This is my API'}
+
+    res.json(response)
+  });
+
+app.use('/api', recipeRouter);
+
 app.get('/', (req, res) => {
   res.send('Welcome to TapChef API!');
 });
