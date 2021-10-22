@@ -11,9 +11,9 @@ const port = process.env.PORT || 3000;
 // this is a get handler
 recipeRouter.route('/recipes')
   .get((req, res) => {
-    const response = { hello: 'This is my API'}
+    const response = { hello: 'This is my API' };
 
-    res.json(response)
+    res.json(response);
   });
 
 app.use('/api', recipeRouter);
