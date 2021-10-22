@@ -1,0 +1,3 @@
+To import Recipe data into the mongoDB database:
+- Make sure that MongoDB is running
+- run 'mongo recipeAPI < recipesJson.js' from the command line
