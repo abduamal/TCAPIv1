@@ -76,5 +76,5 @@ db.recipes.insert([
       cook: '40',
       total: '60',
     },
-  }
+  },
 ]);
