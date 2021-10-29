@@ -16,9 +16,13 @@ const port = process.env.PORT || 3000;
 // this is a get handler
 recipeRouter.route('/recipes')
   .get((req, res) => {
-    const response = { hello: 'This is my API' };
-
-    res.json(response);
+    const { query } = req;
+    Recipe.find(query, (err, recipes) => {
+      if (err) {
+        return res.send(err);
+      }
+      return res.json(recipes);
+    });
   });
 
 app.use('/api', recipeRouter);
