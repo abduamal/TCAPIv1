@@ -25,6 +25,16 @@ recipeRouter.route('/recipes')
     });
   });
 
+recipeRouter.route('/recipes/:recipeId')
+  .get((req, res) => {
+    Recipe.findById(req.params.recipeId, (err, recipe) => {
+      if (err) {
+        return res.send(err);
+      }
+      return res.json(recipe);
+    });
+  });
+
 app.use('/api', recipeRouter);
 
 app.get('/', (req, res) => {
