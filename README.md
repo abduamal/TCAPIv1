@@ -27,7 +27,7 @@ Coming Soon.
 <a name="style"></a>
 ## 4. Code Style
 
-ESLint : Airbnb Style
+ESLint: Airbnb Style
 
 <a name="tech"></a>
 ## 5. Technology
@@ -36,6 +36,7 @@ ESLint : Airbnb Style
 2. Express.js
 3. MongoDB
 4. Mongoose
+6. Insomnia
 
 <a name="now"></a>
 ## 6. Features

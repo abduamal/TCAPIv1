@@ -9,6 +9,8 @@ const app = express();
 const db = mongoose.connect('mongodb://localhost/recipeAPI');
 const Recipe = require('./models/recipeModel');
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 const recipeRouter = express.Router();
 // later, there will be a tool that passes the port into the application.
 // Until it is configured, 3000 serves as backup
@@ -17,6 +19,11 @@ const port = process.env.PORT || 3000;
 // we look at the request, then do something to respond back
 // this is a get handler
 recipeRouter.route('/recipes')
+  .post((req, res) => {
+    const recipe = new Recipe(req.body);
+    recipe.save();
+    return res.status(201).json(recipe);
+  })
   .get((req, res) => {
     const { query } = req;
     Recipe.find(query, (err, recipes) => {
