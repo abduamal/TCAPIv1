@@ -1,23 +1,13 @@
 /* eslint-disable no-param-reassign */
 const express = require('express');
+const recipesController = require('../controllers/recipesController');
 
 function routes(Recipe) {
   const recipeRouter = express.Router();
+  const controller = recipesController(Recipe);
   recipeRouter.route('/recipes')
-    .post((req, res) => {
-      const recipe = new Recipe(req.body);
-      recipe.save();
-      return res.status(201).json(recipe);
-    })
-    .get((req, res) => {
-      const { query } = req;
-      Recipe.find(query, (err, recipes) => {
-        if (err) {
-          return res.send(err);
-        }
-        return res.json(recipes);
-      });
-    });
+    .post(controller.post)
+    .get(controller.get);
 
   recipeRouter.use('/recipes/:recipeId', (req, res, next) => {
     Recipe.findById(req.params.recipeId, (err, recipe) => {
