@@ -32,10 +32,11 @@ ESLint: Airbnb Style
 <a name="tech"></a>
 ## 5. Technology
 
-1. Node.js
-2. Express.js
-3. MongoDB
-4. Mongoose
+1. JavaScript
+2. Node.js
+3. Express.js
+4. MongoDB
+5. Mongoose
 6. Insomnia
 
 <a name="now"></a>

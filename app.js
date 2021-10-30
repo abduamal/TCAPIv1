@@ -11,38 +11,10 @@ const Recipe = require('./models/recipeModel');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-const recipeRouter = express.Router();
+const recipeRouter = require('./routes/recipeRouter')(Recipe);
 // later, there will be a tool that passes the port into the application.
 // Until it is configured, 3000 serves as backup
 const port = process.env.PORT || 3000;
-// with every get request, this app will respond with a function that has the request and response
-// we look at the request, then do something to respond back
-// this is a get handler
-recipeRouter.route('/recipes')
-  .post((req, res) => {
-    const recipe = new Recipe(req.body);
-    recipe.save();
-    return res.status(201).json(recipe);
-  })
-  .get((req, res) => {
-    const { query } = req;
-    Recipe.find(query, (err, recipes) => {
-      if (err) {
-        return res.send(err);
-      }
-      return res.json(recipes);
-    });
-  });
-
-recipeRouter.route('/recipes/:recipeId')
-  .get((req, res) => {
-    Recipe.findById(req.params.recipeId, (err, recipe) => {
-      if (err) {
-        return res.send(err);
-      }
-      return res.json(recipe);
-    });
-  });
 
 app.use('/api', recipeRouter);
 
