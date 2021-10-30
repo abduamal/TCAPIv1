@@ -38,6 +38,7 @@ ESLint: Airbnb Style
 4. MongoDB
 5. Mongoose
 6. Insomnia
+7. BodyParser - middleware that adds the body to requests
 
 <a name="now"></a>
 ## 6. Features
