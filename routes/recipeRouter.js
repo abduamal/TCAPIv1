@@ -71,6 +71,14 @@ function routes(Recipe) {
         }
         return res.json(recipe);
       });
+    })
+    .delete((req, res) => {
+      req.recipe.remove((err) => {
+        if (err) {
+          return res.send(err);
+        }
+        return res.sendStatus(204);
+      });
     });
   return recipeRouter;
 }
