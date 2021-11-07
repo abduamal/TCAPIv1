@@ -39,6 +39,9 @@ ESLint: Airbnb Style
 5. Mongoose
 6. Insomnia
 7. BodyParser - middleware that adds the body to requests
+8. Mocha - testing framework
+9. Should - assertion framework
+10. Sinon - used for mocking
 
 <a name="now"></a>
 ## 6. Features
