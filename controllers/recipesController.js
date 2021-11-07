@@ -1,8 +1,13 @@
 function recipesController(Recipe) {
   function post(req, res) {
     const recipe = new Recipe(req.body);
+    if (!req.body.recipe_title) {
+      res.status(400);
+      return res.send('Recipe title is required');
+    }
     recipe.save();
-    return res.status(201).json(recipe);
+    res.status(201);
+    return res.json(recipe);
   }
   function get(req, res) {
     const { query } = req;
