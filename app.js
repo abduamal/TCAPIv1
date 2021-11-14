@@ -5,8 +5,15 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 // express has been declared, and can be called
 const app = express();
-// connect mongoose to MongoDB
-const db = mongoose.connect('mongodb://localhost/recipeAPI');
+
+if (process.env.ENV === 'Test') {
+  console.log('This is a test.');
+  const db = mongoose.connect('mongodb://localhost/recipeAPI_Test');
+} else {
+  // connect mongoose to MongoDB
+  console.log('This is for real.');
+  const db = mongoose.connect('mongodb://localhost/recipeAPI-prod');
+}
 const Recipe = require('./models/recipeModel');
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,6 +29,8 @@ app.get('/', (req, res) => {
   res.send('Welcome to TapChef API!');
 });
 
-app.listen(port, () => {
+app.server = app.listen(port, () => {
   console.log(`Running on port ${port}`);
 });
+
+module.exports = app;
