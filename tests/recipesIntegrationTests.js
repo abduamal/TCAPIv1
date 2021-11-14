@@ -30,3 +30,8 @@ describe('Recipe CRUD Test', () => {
     done();
   });
 
+  after((done) => {
+    mongoose.connection.close();
+    app.server.close(done());
+  });
+});
