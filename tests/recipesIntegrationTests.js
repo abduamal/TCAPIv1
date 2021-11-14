@@ -24,3 +24,9 @@ describe('Recipe CRUD Test', () => {
         done();
       });
   });
+
+  afterEach((done) => {
+    Recipe.deleteMany({}).exec();
+    done();
+  });
+
