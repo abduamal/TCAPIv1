@@ -39,9 +39,10 @@ ESLint: Airbnb Style
 5. Mongoose
 6. Insomnia
 7. BodyParser - middleware that adds the body to requests
-8. Mocha - testing framework
+8. Mocha - test execution framework that runs all the tests
 9. Should - assertion framework
-10. Sinon - used for mocking
+10. Sinon.js - used for mocking objects in unit testing controllers
+11. Supertest - used for integration testing 
 
 <a name="now"></a>
 ## 6. Features
