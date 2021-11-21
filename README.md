@@ -43,7 +43,7 @@ ESLint: Airbnb Style
 3. Express.js
 4. MongoDB
 5. Mongoose
-6. Insomnia
+6. Insomnia - for testing CRUD
 7. BodyParser - middleware that adds the body to requests
 8. Mocha - test execution framework that runs all the tests
 9. Should - assertion framework
