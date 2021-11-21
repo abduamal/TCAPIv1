@@ -54,7 +54,9 @@ ESLint: Airbnb Style
 <a name="now"></a>
 ## 6. Features
 
-Add + Manipulate data in the database
+Add a recipe to the database.
+Update a recipe in the database.
+Delete a recipe from the database
 
 <a name="stretch"></a>
 ## 7. Stretch Goals
