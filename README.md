@@ -1,5 +1,6 @@
 ![TapChef Logo](https://i.imgur.com/XIFIH1Q.png)
 # TAPCHEF
+![3](https://user-images.githubusercontent.com/61441606/142748775-38288fad-9518-4c3c-a25c-a617ad42bc14.png)
 
 1. [ Motivation. ](#moti)
 2. [ Walkthrough. ](#video)
@@ -58,3 +59,6 @@ Add + Manipulate data in the database
 ## 7. Stretch Goals
 
 Soon, this API will be used in a recipe app frontend, built with React.
+
+![1](https://user-images.githubusercontent.com/61441606/142748758-98dbd39e-fd59-4b0b-8809-49e2716dcd32.png)
+
