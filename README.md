@@ -1,7 +1,8 @@
-![TapChef Logo](https://i.imgur.com/XIFIH1Q.png)
-# TAPCHEF
 ![3](https://user-images.githubusercontent.com/61441606/142748775-38288fad-9518-4c3c-a25c-a617ad42bc14.png)
 
+# TAPCHEF
+
+![TapChef Logo](https://i.imgur.com/XIFIH1Q.png)
 1. [ Motivation. ](#moti)
 2. [ Walkthrough. ](#video)
 3. [ Frontend. ](#ref)
