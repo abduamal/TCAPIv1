@@ -17,7 +17,12 @@ My goal is to help eliminate food waste by handling the tedious legwork that mak
 <a name="video"></a>
 ## 2. Walkthrough
 
-Coming Soon. TapChef is still in early stages.
+Demo: Integration Test + GET & POST with Insomnia
+
+
+https://user-images.githubusercontent.com/61441606/142748492-dec5a8a1-fe45-4b26-afc5-a13f33c02fa2.mp4
+
+
 
 <a name="ref"></a>
 ## 3. Frontend
