@@ -17,6 +17,7 @@ function recipesController(Recipe) {
       }
       return res.json(recipes);
       const returnRecipes = recipes.map((recipe) => {
+        const newRecipe = recipe.toJSON();
     });
   }
   return { post, get };
