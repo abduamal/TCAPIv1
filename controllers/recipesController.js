@@ -19,6 +19,7 @@ function recipesController(Recipe) {
       const returnRecipes = recipes.map((recipe) => {
         const newRecipe = recipe.toJSON();
         newRecipe.links = {};
+        newRecipe.links.self = `http://${req.headers.host}/api/recipes/${recipe._id}`;
     });
   }
   return { post, get };
