@@ -16,6 +16,7 @@ function recipesController(Recipe) {
         return res.send(err);
       }
       return res.json(recipes);
+      const returnRecipes = recipes.map((recipe) => {
     });
   }
   return { post, get };
