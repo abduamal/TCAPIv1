@@ -15,11 +15,13 @@ function recipesController(Recipe) {
       if (err) {
         return res.send(err);
       }
-      return res.json(recipes);
       const returnRecipes = recipes.map((recipe) => {
         const newRecipe = recipe.toJSON();
         newRecipe.links = {};
         newRecipe.links.self = `http://${req.headers.host}/api/recipes/${recipe._id}`;
+        return newRecipe;
+      });
+      return res.json(returnRecipes);
     });
   }
   return { post, get };
