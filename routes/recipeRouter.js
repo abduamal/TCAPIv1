@@ -30,6 +30,7 @@ function routes(Recipe) {
       recipe.food_type = req.body.food_type;
       recipe.cuisine = req.body.cuisine;
       recipe.main_ingredients = req.body.main_ingredients;
+      recipe.all_ingredients = req.body.all_ingredients;
       recipe.url = req.body.url;
       recipe.diet_restrictions = req.body.diet_restrictions;
       recipe.nutritional_info = req.body.nutritional_info;

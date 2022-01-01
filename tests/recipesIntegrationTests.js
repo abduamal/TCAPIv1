@@ -12,7 +12,7 @@ const agent = request.agent(app);
 describe('Recipe CRUD Test', () => {
   it('should allow a recipe to be posted and return _id', (done) => {
     const recipePost = {
-      recipe_title: 'Awesome Tasting Dish', author: 'Njeshe Amal', food_type: 'breakfast', cuisine: 'American', main_ingredients: 'Eggs, Bacon, Flour, Sugar', url: 'https://falserecipeaddress.com', diet_restrictions: 'all a dem', nutritional_info: 'none a dem', occasion: 'integration testing', way_of_cooking: 'hot air', time: '60 seconds'
+      recipe_title: 'Awesome Tasting Dish', author: 'Njeshe Amal', food_type: 'breakfast', cuisine: 'American', main_ingredients: 'Eggs, Bacon, Flour, Sugar', all_ingredients: 'Eggs, Bacon, Flour, Sugar, Butter, Milk, Salt, Olive Oil, Black Pepper', url: 'https://falserecipeaddress.com', diet_restrictions: 'all a dem', nutritional_info: 'none a dem', occasion: 'integration testing', way_of_cooking: 'hot air', time: '60 seconds'
     };
     agent.post('/api/recipes')
       .send(recipePost)
