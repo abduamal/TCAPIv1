@@ -49,7 +49,7 @@ ESLint: Airbnb Style
 8. Mocha - test execution framework that runs all the tests
 9. Should - assertion framework
 10. Sinon.js - used for mocking objects in unit testing controllers
-11. Supertest - used for integration testing 
+11. Supertest - used for integration testing
 
 <a name="now"></a>
 ## 6. Features
@@ -62,6 +62,7 @@ Delete a recipe from the database
 ## 7. Stretch Goals
 
 Soon, this API will be used in a recipe app frontend, built with React.
+* Add 'stats' which will hold time, complexity, and review data
+* How can I gather recipe data from varied endpoints?
 
 ![1](https://user-images.githubusercontent.com/61441606/142748758-98dbd39e-fd59-4b0b-8809-49e2716dcd32.png)
-
