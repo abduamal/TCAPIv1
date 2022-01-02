@@ -1,5 +1,7 @@
 // to use express, it must be required
 const express = require('express');
+// to enable all CORS requests
+const cors = require('cors');
 // add mongoose, which will deal with all the database stuff
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -15,6 +17,8 @@ if (process.env.ENV === 'Test') {
   const db = mongoose.connect('mongodb://localhost/recipeAPI-prod');
 }
 const Recipe = require('./models/recipeModel');
+
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
